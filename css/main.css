@@ -1,0 +1,35 @@
+/*Text colours*/
+
+h1{
+    color:#B46CFF;
+}
+
+h2{
+    color:#B46CFF;
+}
+
+h3{
+    color:#2E006E;
+}
+
+main{
+    color:#C6C7FF;
+}
+
+body{
+    color:#8127FF;
+}
+
+*{
+    background-color: #C6C7FF;
+}
+
+/*Font*/
+
+h2{
+    font-family: 'luminari',fantasy;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium';
+}
