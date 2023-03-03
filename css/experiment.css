@@ -1,0 +1,82 @@
+/*Colours*/
+
+h1{
+    color: #510d91;
+    background-color:#e6a5fa;
+}
+
+h2{
+    color:#630db5;
+    background-color: antiquewhite;
+}
+
+h3{
+    color:#2E006E;
+    background-color: azure;
+}
+
+main{
+    color:#2E006E;
+}
+
+body{
+    color:#8127FF;
+}
+
+
+/*Position and Font*/
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 50%;
+    text-decoration: underline;
+    padding: 10px;
+    border:#510d91 solid;
+}
+
+h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 50%;
+    text-decoration: underline;
+    padding: 10px;
+    border:#2E006E solid;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+}
+
+ul{
+    list-style-type: none;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 50%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: antiquewhite;
+    border:#510d91 solid;
+}
+
+li{
+    display: block;
+    text-align: center;
+    font-size: larger;
+    padding: 15px;
+}
+
+li a:hover{
+    background-color:#f7d5a8
+}
+
+.centImg{
+    margin-left: 37%;
+    margin-right: 37%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
