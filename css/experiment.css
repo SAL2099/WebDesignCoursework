@@ -28,7 +28,7 @@ body{
 
 h1{
     text-align: center;
-    margin: auto;
+    margin: 5px;
     margin-bottom: 2%;
     width: 50%;
     text-decoration: underline;
@@ -39,7 +39,7 @@ h1{
 h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    margin: auto;
+    margin: 5px;
     margin-bottom: 2%;
     width: 50%;
     text-decoration: underline;
@@ -54,20 +54,25 @@ h3{
 
 ul{
     list-style-type: none;
-    margin: auto;
+    margin: 5px;
     margin-bottom: 2%;
     width: 50%;
-    padding: 10px;
+    padding: 0;
     overflow: hidden;
     background-color: antiquewhite;
     border:#510d91 solid;
 }
 
 li{
+    list-style-type: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
     display: block;
     text-align: center;
     font-size: larger;
     padding: 15px;
+    width: 15%
 }
 
 li a:hover{
@@ -75,8 +80,89 @@ li a:hover{
 }
 
 .centImg{
-    margin-left: 37%;
-    margin-right: 37%;
+    margin-left: 30%;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.left-col{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 10px;
+    width: 45%
+}
+
+.right-col{
+    float: right;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 10px;
+    width: 25%
+}
+
+.centre-text{
+    margin-left: 20%;
+
+}
+
+fieldset{
+    margin-left: 5px;
+}
+
+.carousel{
+    height:fit-content;
+    width:75%
+}
+
+.carousel.inner{
+    width:30%
+}
+
+.carousel-item{
+    width:50%
+}
+
+table{
+    text-indent: initial;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    text-align: start;
+    border-spacing: 2px;
+    font-variant: normal;
+    border-collapse: collapse;
+}
+
+th{
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+td{
+    display: table-cell;
+    vertical-align: inherit;
+    border: black 2px solid;
+    border-spacing: 2px;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color:antiquewhite;
 }
