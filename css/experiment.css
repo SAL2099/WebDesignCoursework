@@ -30,7 +30,7 @@ h1{
     text-align: center;
     margin: 5px;
     margin-bottom: 2%;
-    width: 50%;
+    width: 100%;
     text-decoration: underline;
     padding: 10px;
     border:#510d91 solid;
@@ -56,7 +56,7 @@ ul{
     list-style-type: none;
     margin: 5px;
     margin-bottom: 2%;
-    width: 50%;
+    width: 100%;
     padding: 0;
     overflow: hidden;
     background-color: antiquewhite;
@@ -72,7 +72,7 @@ li{
     text-align: center;
     font-size: larger;
     padding: 15px;
-    width: 15%
+    width: 12%
 }
 
 li a:hover{
@@ -117,19 +117,6 @@ fieldset{
     margin-left: 5px;
 }
 
-.carousel{
-    height:fit-content;
-    width:75%
-}
-
-.carousel.inner{
-    width:30%
-}
-
-.carousel-item{
-    width:50%
-}
-
 table{
     text-indent: initial;
     white-space: normal;
@@ -166,3 +153,40 @@ tr {
 tr:nth-child(even) {
     background-color:antiquewhite;
 }
+
+.carousel{
+    position:absolute;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 5px;
+    width:50%;
+    border-collapse: collapse;
+}
+
+.carousel-inner{
+    width:100%
+}
+
+.carousel-item{
+    width:100%
+}
+
+.carousel-control-prev{
+    float: left;
+    bottom: 15%;
+    height:10%;
+    position: absolute;
+    align-items: center;
+}
+
+.carousel-control-next{
+    bottom: 15%;
+    height:10%;
+    margin-left: 42%;
+    position: absolute;
+    align-items: center;
+}
+
