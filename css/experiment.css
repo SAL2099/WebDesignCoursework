@@ -93,7 +93,7 @@ li a:hover{
     padding-left: 10px;
     padding-bottom: 2px;
     margin: 10px;
-    width: 45%
+    width: 65%
 }
 
 .right-col{
@@ -190,3 +190,13 @@ tr:nth-child(even) {
     align-items: center;
 }
 
+.gallery-img{
+    width:100%;
+}
+#img-gallery{
+    padding-top:10px;
+}
+
+#img-gallery.row{
+    margin-bottom:10px
+}
