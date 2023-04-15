@@ -23,7 +23,7 @@ main{
 }
 
 body{
-    color:#8127FF;
+    color:#2E006E;
 }
 
 
@@ -220,6 +220,7 @@ tr:nth-child(even) {
 .gallery-img{
     width:100%;
 }
+
 #img-gallery{
     padding-top:10px;
 }
@@ -229,5 +230,6 @@ tr:nth-child(even) {
 }
 
 .col{
-    padding:15px;
+    padding:5px;
+ 
 }
