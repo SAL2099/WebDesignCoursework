@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Conspiracy Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -7,85 +9,114 @@
         <script src = "scripts/scripts.js"></script>
     </head>
 
+    <!-- Threat Model
+    
+    
+    Threat Source: External
+    Threat Agent: Human
+    Threat Intention: Intentional
+    Threat Motivation: Embarressment of the society
+    Threat Impact: Defacement of scoiety website, changing of members images, possible identity theft of members
+    Threat Migitation: Login validation, 2FA in place before member images can be changed, email updates to members who have been affected by image changes.
+
+
+    -->
+
     <body>
         <header>
-            <img src = "images/SocietyLogo.png" class="logo">
+            <!-- Logo image and title of the page-->
+            <img src = "images/SocietyLogo.png" class="logo" alt = "Society logo">
             <h1>The Conspiracy Society</h1>
-            <form class="mainLogin">
+
+            <!-- Login form-->
+
+            <form id = "mainLogin" class="mainLogin">
                 <fieldset>
-                    <input type="text" name="email" placeholder="email">
-                    <input type="password" name="password" placeholder="password">
-                    <button type="button" onclick="login()">Login</button>
+                    <label for="loginEmail" >Email:</label>
+                    <input type="text" name="email" id="loginEmail" placeholder="email" required>
+                    <label for="loginPassword" >Password:</label>
+                    <input type="password" name="password" id = "loginPassword" placeholder="password" required>
+                    <button type="button" id = "loginButton" onclick="login()">Log in</button>
                 </fieldset>
             </form>    
         </header>
+
+        <!-- Nav bar-->
 
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact_us.html">Send us a telegram</a></li>
-                <li><a href="current_members.html">Witness our ranks</a></li>
+                <li class="activePage"><a href="current_members.html">Witness our ranks</a></li>
                 <li><a href="event_calender.html">Upcoming events</a></li>
                 <li><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="conspiracys.html">The truths of the world</a></li>
+                <li><a href="conspiracies.html">The truths of the world</a></li>
+                <li><a href="sources.html">Our sources and more</a></li>
             </ul>
         </nav>
 
+        <!-- Photo gallery of members -->
+
         <main> 
             <div class="container-fluid">
+
+                <!-- Create three rows -->
+
                 <div class="row row-cols-3">
 
+                    <!-- Create div for each member, asign role, then image and its properties, then name -->
+
                     <div class="Col">
-                        <h5>High Truthseer</h5>
-                        <img src="images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Chris Peacock">
+                        <h5>HIGH TRUTHSEER</h5>
+                        <img src="images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Chris Peacock">
                         <h5>Chris Peacock</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Vice Truthseer</h5>
-                        <img src="images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Jack Mayhoff">
+                        <h5>VICE TRUTHSEER</h5>
+                        <img src="images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Jack Mayhoff">
                         <h5>Jack Mayhoff</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Vault Keeper</h5>
-                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>VAULT KEEPER</h5>
+                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Mag Smrodu</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Public Relations Expert</h5>
-                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>PUBLIC RELATIONS EXPERT</h5>
+                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Dharma Lunchmoon</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Chief Spymaster</h5>
-                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>CHIEF SPYMASTER</h5>
+                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Joe Biden</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Prime Envoy</h5>
-                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>PRIME ENVOY</h5>
+                        <img src = "images/higherMember.png" class="rounded-circle massie-hovering" width="120" height="120"  style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Rian Johnson</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Munchee Collecter</h5>
-                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>MUNCHEE COLLECTOR</h5>
+                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Jimmy Space</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Legal Councel</h5>
-                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
-                        <h5>Sual Bueno</h5>
+                        <h5>LEGAL COUNCEL</h5>
+                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>Saul Bueno</h5>
                     </div>
 
                     <div class="Col">
-                        <h5>Evidence Gatherer</h5>
-                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden" alt = "Mag Smrodu">
+                        <h5>EVIDENCE GATHERER</h5>
+                        <img src = "images/lesserMember.png" class="rounded-circle massie-hovering" width="120" height="120" style="overflow:hidden" alt = "Mag Smrodu">
                         <h5>Walter Blanco</h5>
                     </div>
 
@@ -95,6 +126,10 @@
 
         <aside> </aside>
 
-        <footer> </footer>
+        <footer> 
+            <p> © Stuart Alexander Lancaster 2023 </p>
+        </footer>
+
     </body>
+    
 </html>

@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Conspiracy Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -10,16 +12,18 @@
     <body>
         <header>
             <!-- Logo image and title of the page-->
-            <img src = "images/SocietyLogo.png" class="logo">
+            <img src = "images/SocietyLogo.png" class="logo" alt = "Society logo">
             <h1>The Conspiracy Society</h1>
 
             <!-- Login form-->
 
-            <form class="mainLogin">
+            <form id = "mainLogin" class="mainLogin">
                 <fieldset>
-                    <input type="text" name="email" placeholder="email">
-                    <input type="password" name="password" placeholder="password">
-                    <button type="button" onclick="login()">Login</button>
+                    <label for="loginEmail" >Email:</label>
+                    <input type="text" name="email" id="loginEmail" placeholder="email" required>
+                    <label for="loginPassword" >Password:</label>
+                    <input type="password" name="password" id = "loginPassword" placeholder="password" required>
+                    <button type="button" id = "loginButton" onclick="login()">Log in</button>
                 </fieldset>
             </form>    
         </header>
@@ -29,31 +33,42 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contact_us.html">Send us a telegram</a></li>
+                <li class="activePage"><a href="contact_us.html">Send us a telegram</a></li>
                 <li><a href="current_members.html">Witness our ranks</a></li>
                 <li><a href="event_calender.html">Upcoming events</a></li>
                 <li><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="conspiracys.html">The truths of the world</a></li>
+                <li><a href="conspiracies.html">The truths of the world</a></li>
+                <li><a href="sources.html">Our sources and more</a></li>
             </ul>
         </nav>
 
+        <!-- Left hand side column -->
+
         <main> 
             <div class="left-col">
+
+                <!-- Contact us form -->
+
                 <form>
                     <fieldset>
                         <legend>If you wish to make contact with the Truthseekers, complete the contact ritual below...</legend>
-                        <legend>Alternatively, find us on Twitter!</legend>
 
                         <label for = "name">Name:</label>
-                        <input type = "text" name = "name" value=" "/> </br>
+                        <input type = "text" id = "name" name = "name" value=" "> <br>
+
                         <label for = "email">Email:</label>
-                        <input type = "text" name = "email" value = ""/> </br>
+                        <input type = "text" id = "email" name = "email" value = ""> <br>
+
                         <label for = "checkbox1">Membership Status: You are a believer:</label>
-                        <input type = "checkbox" id = "checkbox1" name = "checkbox1" value=""/> 
+                        <input type = "checkbox" id = "checkbox1" name = "checkbox1" value=""> 
                         <label for = "checkbox2">You have not yet opened your eyes...</label>
-                        <input type = "checkbox" id = "checkbox2" name = "checkbox2" value=""/> </br>
+                        <input type = "checkbox" id = "checkbox2" name = "checkbox2" value=""> <br>
+
                         <label for = "comments">Comments:</label>
-                        <input type = "text" name = "comments" value = ""/> </br>
+                        <input type = "text" id = "comments" name = "comments" value = ""> <br>
+
+                        <label for = "fileInput">Attach a file</label>
+                        <input type ="file" id="fileInput" name="file"> <br>
 
                         <button type="button" onclick=sendForm()>Submit</button> 
 
@@ -65,8 +80,24 @@
             </div>
         </main>
 
-        <aside> </aside>
+        <div class = "right-col">
 
-        <footer> </footer>
+            <aside>
+
+                <h2 class = "fullWidth"> See our friends on twitter! </h2>
+
+                <div>
+                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How Can The Moon Be Real If The Moon Isn’t Real? <a href="https://t.co/BH92s9qNsP">pic.twitter.com/BH92s9qNsP</a></p>&mdash; ARiskyTaxi (@ARiskyTaxi) <a href="https://twitter.com/ARiskyTaxi/status/1645519450249068570?ref_src=twsrc%5Etfw">April 10, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div> 
+
+            </aside>
+
+        </div>
+
+        <footer> 
+            <p> © Stuart Alexander Lancaster 2023 </p>
+        </footer>
+
     </body>
+    
 </html>

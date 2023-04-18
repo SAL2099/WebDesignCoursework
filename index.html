@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Conspiracy Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -7,19 +9,36 @@
         <script src = "scripts/scripts.js"></script>
     </head>
 
+
+    <!-- Threat Model
+    
+    
+    Threat Source: External
+    Threat Agent: Human
+    Threat Intention: Intentional
+    Threat Motivation: Fraud
+    Threat Impact: Members emails and passwords stolen, identity fraud
+    Threat Migitation: Impliment input validation to prevent SQL Injection, send emails to members if incorrect details entered so they know if someone is trying to get in, log members out after set time if they forget to log out nobody can see their account.
+
+    
+    -->
+
+
     <body>
         <header>
             <!-- Logo image and title of the page-->
-            <img src = "images/SocietyLogo.png" class="logo">
+            <img src = "images/SocietyLogo.png" class="logo" alt = "Society logo">
             <h1>The Conspiracy Society</h1>
 
             <!-- Login form-->
 
-            <form class="mainLogin">
+            <form id = "mainLogin" class="mainLogin">
                 <fieldset>
-                    <input type="text" name="email" placeholder="email">
-                    <input type="password" name="password" placeholder="password">
-                    <button type="button" onclick="login()">Login</button>
+                    <label for="loginEmail" >Email:</label>
+                    <input type="text" name="email" id="loginEmail" placeholder="email" required>
+                    <label for="loginPassword" >Password:</label>
+                    <input type="password" name="password" id = "loginPassword" placeholder="password" required>
+                    <button type="button" id = "loginButton" onclick="login()">Log in</button>
                 </fieldset>
             </form>    
         </header>
@@ -28,12 +47,13 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="activePage"><a href="index.html">Home</a></li>
                 <li><a href="contact_us.html">Send us a telegram</a></li>
                 <li><a href="current_members.html">Witness our ranks</a></li>
                 <li><a href="event_calender.html">Upcoming events</a></li>
                 <li><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="conspiracys.html">The truths of the world</a></li>
+                <li><a href="conspiracies.html">The truths of the world</a></li>
+                <li><a href="sources.html">Our sources and more</a></li>
             </ul>
         </nav>
 
@@ -41,10 +61,12 @@
 
         <div class="left-col">
             <main> 
+                
                 <div> 
                     <h3> It's time to open your mind </h3>
                     <p> Have you ever noticed things that do not seem oridinary? Things that go against the fabric of reality itself, that make you question what is real, and what is a figment of your imagination created by the drugs the government put in your water? Whatever the reason, you are finally awake and your mind is free, and we invite you to join others like you who see the world for what it truly is. Join us as we debate if global warming is real or a secret project the leaders of the world are using to fight the yeti uprising, whether or not RGU itself is a cover up for a government facility drilling into the multiverse, whether or not the dress is white and gold or blue and black, or if the earth is flat, hollow or a cone shape. Whatever you may believe, this is a place for you. </p>
-                </div>    
+                </div>
+                  
             </main>
 
             <!-- Home page carousel-->
@@ -61,20 +83,20 @@
                     
                     <!-- Item 1 -->
                     <div class="carousel-item active">
-                        <img class="d=block w-100" src="images/carouselOneResized.png" alt = "A man in front of a conspiracy board" class = "centImg">
-                        <figcaption>Some may call us crazy...</figcaption>
+                        <img class="d=block w-100" src="images/carouselOneResized.png" alt = "A man in front of a conspiracy board">
+                        <h3>Some may call us crazy...</h3>
                     </div>
     
                     <!-- Item 2 -->
                     <div class="carousel-item">
-                        <img class="d=block w-100" src="images/carouselTwoResized.png" alt = "A flat earth" class = "centImg">
-                        <figcaption> But that's only because they don't open their eyes...</figcaption>
+                        <img class="d=block w-100" src="images/carouselTwoResized.png" alt = "A flat earth">
+                        <h3> But that's only because they don't open their eyes...</h3>
                     </div>
     
                     <!-- Item 3 -->
                     <div class="carousel-item">
-                        <img class="d=block w-100" src="images/carouselThreeResized.jpeg" alt = "A hooded society around a table" class = "centImg">
-                        <figcaption> And see the world for what it is...</figcaption>
+                        <img class="d=block w-100" src="images/carouselThreeResized.jpeg" alt = "A hooded society around a table">
+                        <h3> And see the world for what it is...</h3>
                     </div>
     
                 </div>
@@ -91,10 +113,36 @@
                     </button>
     
             </div>
+
         </div>
 
-        <aside> </aside>
+        <!-- Right column with news-->
 
-        <footer> </footer>
+        <div class = "right-col">
+            <aside> 
+               <h2 class="fullWidth"> Important News and Updates! </h2> 
+
+               <div class = news>
+                    <!-- Create article -->
+                    <img src = "images/TheRGUPodcast.jpg" alt = "Our new podcast!" class = "newsImage">
+                    <h3 class = "textPadding">New deal with Spotify!</h3>
+                    <p class = "textPadding"> In a historical moment, we have sealed a deal with Spotify for them to host our brand new podcast where we can share our theories to the world! Keep your ears open for more news!</p>
+
+               </div>
+
+               <div class = news>
+                    <img src = "images/hollowEarth.png" alt = "The hollow earth!" class = "newsImage">
+                    <h3 class = "textPadding"> Hollow Earth trip soon!</h3>
+                    <p class = "textPadding"> Everyone please remember to hand in your forms to Jack if you want to go on the trip! The deposit is to be included with the form, and bring protection in case we find a monster!</p>
+
+               </div>
+
+            </aside>
+        </div>
+
+        <footer> 
+            <p> © Stuart Alexander Lancaster 2023 </p>
+        </footer>
+
     </body>
 </html>

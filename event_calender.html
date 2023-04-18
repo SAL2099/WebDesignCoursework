@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Conspiracy Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -9,40 +11,58 @@
 
     <body>
         <header>
-            <img src = "images/SocietyLogo.png" class="logo">
+            <!-- Logo image and title of the page-->
+            <img src = "images/SocietyLogo.png" class="logo" alt = "Society logo">
             <h1>The Conspiracy Society</h1>
-            <form class="mainLogin">
+
+            <!-- Login form-->
+
+            <form id = "mainLogin" class="mainLogin">
                 <fieldset>
-                    <input type="text" name="email" placeholder="email">
-                    <input type="password" name="password" placeholder="password">
-                    <button type="button" onclick="login()">Login</button>
+                    <label for="loginEmail" >Email:</label>
+                    <input type="text" name="email" id="loginEmail" placeholder="email" required>
+                    <label for="loginPassword" >Password:</label>
+                    <input type="password" name="password" id = "loginPassword" placeholder="password" required>
+                    <button type="button" id = "loginButton" onclick="login()">Log in</button>
                 </fieldset>
             </form>    
         </header>
+
+        <!-- Nav bar-->
 
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact_us.html">Send us a telegram</a></li>
                 <li><a href="current_members.html">Witness our ranks</a></li>
-                <li><a href="event_calender.html">Upcoming events</a></li>
+                <li class="activePage"><a href="event_calender.html">Upcoming events</a></li>
                 <li><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="conspiracys.html">The truths of the world</a></li>
+                <li><a href="conspiracies.html">The truths of the world</a></li>
+                <li><a href="sources.html">Our sources and more</a></li>
             </ul>
         </nav>
         
         <main> 
             <div>
+
+                <!-- Create a table -->
+
                 <table>
+
+                    <!-- Create a row with headings for each day of the week -->
+
                     <tr>
                         <td></td><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
                     </tr>
+                    
+
+                    <!-- Rows for each week, with an event for each week -->
 
                     <tr>
                         <th>W1</th>
                         <td></td>
                         <td></td>
-                        <td>Initiation Ceremony <br/> Robe fitting as well in the ritual chamber</td>
+                        <td>Initiation Ceremony <br> Robe fitting as well in the ritual chamber</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -51,7 +71,7 @@
 
                     <tr>
                         <th>W2</th>
-                        <td>Uncovering the truth about the multiverse drill under Ishbel Gordon... </br> Free food and drinks at the investigation room</td>
+                        <td>Uncovering the truth about the multiverse drill under Ishbel Gordon... <br> Free food and drinks at the investigation room</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -65,7 +85,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>Exposing the memes! </br> Online as the investigation room is being refurbished</td>
+                        <td>Exposing the memes! <br> Online as the investigation room is being refurbished</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -74,7 +94,7 @@
                     <tr>
                         <th>W4</th>
                         <td></td>
-                        <td>Increasing global warming to fight the Yetis. </br> In the refurbished investigation room with pizza</td>
+                        <td>Increasing global warming to fight the Yetis. <br> In the refurbished investigation room with pizza</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -89,7 +109,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>Bringing together the facts </br> Online, as we recover our minds.</td>
+                        <td>Bringing together the facts <br> Online, as we recover our minds.</td>
                         <td></td>
                     </tr>
 
@@ -106,7 +126,7 @@
 
                     <tr>
                         <th>W6</th>
-                        <td>Moutning cannons to fight back against the pirates. </br> The stairwell outside the investigation room</td>
+                        <td>Moutning cannons to fight back against the pirates. <br> The stairwell outside the investigation room</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -132,7 +152,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>Going to the moon to expose the truth! </br> The rocket silo beneath Riverside </td>
+                        <td>Going to the moon to expose the truth! <br> The rocket silo beneath Riverside </td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -148,6 +168,8 @@
                         <td>Hunting the Gloperjocker</td>
                     </tr>
                     
+                    <!-- Society on break so one event needs to spread over entire column -->
+
                     <tr>
                         <th>W10</th>
                         <td colspan="7">The Turthseekers rest their weary eyes as we break for the easter...</td>
@@ -159,7 +181,7 @@
 
                     <tr>
                         <th>W12</th>
-                        <td>Finding the missing clubmembers </br> Fifty of you left, why was I the only one who came back? </td>
+                        <td>Finding the missing clubmembers <br> Fifty of you left, why was I the only one who came back? </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -169,11 +191,36 @@
                     </tr>
                     
                 </table>
+
+                <form name = "event">
+
+                    <!-- Form for submitting an event -->
+
+                    <fieldset>
+
+                        <legend> Use the form below to recomend an event! </legend>
+
+                        <label for = "eventTitle">Event:</label>
+                        <input type = "text" id = "eventTitle" name = "eventTitle" placeholder = "event name" required > <br>
+
+                        <label for = "eventDate"> Date of event:</label>
+                        <input type = "date" id = "eventDate" name = "eventDate" required> <br>
+
+                        <button type="button" onclick="submitEvent()">Submit</button>
+
+                    </fieldset>
+
+                </form>
+
             </div>
         </main>
 
         <aside> </aside>
 
-        <footer> </footer>
+        <footer> 
+            <p> © Stuart Alexander Lancaster 2023 </p>
+        </footer>
+
     </body>
+    
 </html>

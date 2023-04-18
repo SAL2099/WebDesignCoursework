@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Conspiracy Society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href = "css/experiment.css">
+        <script src = "scripts/scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Logo image and title of the page-->
+            <img src = "images/SocietyLogo.png" class="logo" alt = "Society logo">
+            <h1>The Conspiracy Society</h1>
+
+            <!-- Login form-->
+
+            <form id = "mainLogin" class="mainLogin">
+                <fieldset>
+                    <label for="loginEmail" >Email:</label>
+                    <input type="text" name="email" id="loginEmail" placeholder="email" required>
+                    <label for="loginPassword" >Password:</label>
+                    <input type="password" name="password" id = "loginPassword" placeholder="password" required>
+                    <button type="button" id = "loginButton" onclick="login()">Log in</button>
+                </fieldset>
+            </form>    
+        </header>
+
+        <!-- Nav bar-->
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact_us.html">Send us a telegram</a></li>
+                <li><a href="current_members.html">Witness our ranks</a></li>
+                <li><a href="event_calender.html">Upcoming events</a></li>
+                <li><a href="img_gallery.html">Gallery</a></li>
+                <li class="activePage"><a href="conspiracies.html">The truths of the world</a></li>
+                <li><a href="sources.html">Our sources and more</a></li>
+            </ul>
+        </nav>
+
+        <!-- Left hand side collumn-->
+
+        <div class="left-col-small">
+
+            <main> 
+
+                <h3 class = "textPadding"> Click an image to learn more about our beliefs, then click again to deselect it</h3>
+
+                <!-- Create container for images -->
+
+                <div id = "theoryGallery" class = "container-fluid">
+
+                    <div class="row row-cols-2">
+
+                        <!-- When you click on an image, it adds a border, and when you double click it removes that border-->
+
+                        <div class = col>
+                            <img src="images/MoonLanding.jpg" alt="The Faked Moon Landing" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+    
+                        <div>
+                            <img src="images/Meme.png" alt="Memes, the DNA od thr soul!" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/RGUParticleAccelerator.PNG" alt="The RGU Coverup" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/Iluminati.png" alt="The Iluminati" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/snowmanYetiUprising.png" alt="The Snowmen and Yeti" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/FlatEarth.png" alt="Earths True Shape" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/GloperjockerTemplate.png." alt="The Gloperjocker" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/Whale.png" alt="The Sneaky Whale" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/pirates.png" alt = "Interdimensional raiders!" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+                        <div>
+                            <img src="images/hollowEarth.png" alt = "The Hollow Earth" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </main>     
+
+        </div>
+
+        <div class = "right-col-big">
+
+            <aside>
+                
+            
+            </aside>
+
+        </div>
+
+
+        <footer> 
+            <p> © Stuart Alexander Lancaster 2023 </p>
+        </footer>
+
+    </body>
+    
+</html>
