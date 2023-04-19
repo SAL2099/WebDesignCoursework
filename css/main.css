@@ -318,8 +318,8 @@ tr:hover{
 }
 
 .imgWidthFull{
-    width:100%;
-    /* Sets the width of assigned object to 100%. Intended for images*/
+    width:90%;
+    /* Sets the width of assigned object to 90%. Intended for images*/
 }
 
 footer{
