@@ -5,7 +5,7 @@
         <title>Conspiracy Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href = "css/experiment.css">
+        <link rel="stylesheet" href = "css/main.css">
         <script src = "scripts/scripts.js"></script>
     </head>
 
@@ -48,7 +48,7 @@
 
             <main> 
 
-                <h3 class = "textPadding"> Click an image to learn more about our beliefs, then click again to deselect it</h3>
+                <h3 class = "textPadding"> Click an image to select it, then click again after a second or two to show information. Double click the image to deselect it.</h3>
 
                 <!-- Create container for images -->
 
@@ -59,43 +59,39 @@
                         <!-- When you click on an image, it adds a border, and when you double click it removes that border-->
 
                         <div class = col>
-                            <img src="images/MoonLanding.jpg" alt="The Faked Moon Landing" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/MoonLanding.jpg" alt="The Faked Moon Landing" class = "imgWidthFull" onclick="this.style='border: solid red';showCon1();" ondblclick="this.style='border: none';showCon1()">
                         </div>
     
                         <div>
-                            <img src="images/Meme.png" alt="Memes, the DNA od thr soul!" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/Meme.png" alt="Memes, the DNA od thr soul!" class = "imgWidthFull" onclick="this.style='border: solid red';showCon2()" ondblclick="this.style='border: none';showCon2()">
                         </div>
 
                         <div>
-                            <img src="images/RGUParticleAccelerator.PNG" alt="The RGU Coverup" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/RGUParticleAccelerator.PNG" alt="The RGU Coverup" class = "imgWidthFull" onclick="this.style='border: solid red';showCon3()" ondblclick="this.style='border: none';showCon3()">
                         </div>
 
                         <div>
-                            <img src="images/Iluminati.png" alt="The Iluminati" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/Iluminati.png" alt="The Iluminati" class = "imgWidthFull" onclick="this.style='border: solid red';showCon4()" ondblclick="this.style='border: none';showCon4()">
                         </div>
 
                         <div>
-                            <img src="images/snowmanYetiUprising.png" alt="The Snowmen and Yeti" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/snowmanYetiUprising.png" alt="The Snowmen and Yeti" class = "imgWidthFull" onclick="this.style='border: solid red';showCon5()" ondblclick="this.style='border: none';showCon5()">
                         </div>
 
                         <div>
-                            <img src="images/FlatEarth.png" alt="Earths True Shape" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/FlatEarth.png" alt="Earths True Shape" class = "imgWidthFull" onclick="this.style='border: solid red';showCon6()" ondblclick="this.style='border: none';showCon6()">
                         </div>
 
                         <div>
-                            <img src="images/GloperjockerTemplate.png." alt="The Gloperjocker" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/GloperjockerTemplate.png." alt="The Gloperjocker" class = "imgWidthFull" onclick="this.style='border: solid red';showCon7()" ondblclick="this.style='border: none';showCon7()">
                         </div>
 
                         <div>
-                            <img src="images/Whale.png" alt="The Sneaky Whale" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/Whale.png" alt="The Sneaky Whale" class = "imgWidthFull" onclick="this.style='border: solid red';showCon8()" ondblclick="this.style='border: none';showCon8()">
                         </div>
 
                         <div>
-                            <img src="images/pirates.png" alt = "Interdimensional raiders!" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
-                        </div>
-
-                        <div>
-                            <img src="images/hollowEarth.png" alt = "The Hollow Earth" class = "imgWidthFull" onclick="this.style='border: solid red'" ondblclick="this.style='border: none'">
+                            <img src="images/hollowEarth.png" alt = "The Hollow Earth" class = "imgWidthFull" onclick="this.style='border: solid red';showCon9()" ondblclick="this.style='border: none';showCon9()">
                         </div>
 
 
@@ -108,11 +104,136 @@
 
         </div>
 
+        <!-- Creates the right column, bigger than on the other pages.-->
+
         <div class = "right-col-big">
 
             <aside>
                 
-            
+                <!-- When an image is clicked, it reveals the corresponding theory for that image-->
+
+                <div id = "con1" class = "hide">
+
+                    <h2 class = "fullWidth"> The Moon Landing</h2>
+                    <p class = "textPadding"> This one is a tale as old as time, that is if time only existed for 54 years which is a story for another time! What's important for the here and how though, are the moon landings. More specifically, the Moon Landing of 1969. We're all quite familiar with it aren't we? A historic moment, one giant leap for mankind you could say. But what if it wasn't? Here's what we know so far.</p>
+                    <h3 class = "textPadding"> THE RUNUP</h3>
+                    <p class = "textPadding"> During the height of the Cold War between the Soviet Union and the United States, the space race became just as important as the arms race. Both sides racing to be the first to leave their mark in history. <br>
+                    The Soviets were the first to launch a manmade object, Sputnik, around the Earth's orbit, and also the first to send a man to space so the Americans were desperate to be the first to the moon. Except, they weren't the first the moon. <br>
+                    So desperate they were, they fakes the entire thing! No man stepped on the moon, no man planted the American flag on the moon. It was all staged, part of a propaganda machine to claim American superiority over the Soviets.</p>
+                    <h3 class = "textPadding"> THE HOW</h3>
+                    <p class = "textPadding"> So, we know that the Americans faked the moon landing, and we have a probbale motivation, that being they wanted to raise morale and have technological supremecy over the Soviets and win the space race. But how did they do it? Well that's very simple. <br>
+                    Now, what is important to distinguish here, is that while they didn't send a man to the moon, they did still send something up. Once enough time had passed, prerecorded footage of the "astronauts" was played in time to make it seem as if they had really gone to the moon, and all reentry footage was edited by Stanley Kubrick to make it seem as if they had reall come back from the moon. <br>
+                    Using various materials, they constructed a very lifelike replica of what we are led to believe was the moons surface, and shot their footage there. Everyone knows that expose to the real moons lack of atmosphere would have destroyed any camera! </p>
+
+                    <h3 class = "fullWidth"> And that's it, the story behind something so humangous is really that simple. One big lie unraveled so easily.</h3>
+
+                </div>
+
+                <div id = "con2" class = "hide">
+
+                    <h2 class = "fullWidth"> The Truth of Memes </h2>
+                    <h3 class = "textPadding"> WHAT IS A MEME?</h3>
+                    <p class = "textPadding"> When most people think of memes, they think of Harold hiding the pain. They think of a surprised pikachu, of Kermit sipping his tea, grumpy cat and doge. <br>
+                    While these are memes, they are the modern definition of a meme. In fact, memes have a much deeper history than our funny internet images that my on occassion cause you to exhale sharply from your nose in "amusement". <br>
+                    The word dates back to 1976, when Richard Dawkins first used the term in his book The Selfish Gene. To put it simply, memes are like the DNA of the soul itself. They are our culture, everything we pass on </p>
+                    <h3 class = "textPadding"> WHY IS THIS IMPORTANT?</h3>
+                    <p class = "textPadding"> Oh you sweet naive summer child, don't you see? Memes control everything. There is no such thing as free will. It's a joke, just like religion. We're controlled by these memes. <br>
+                    Perhaps it is the iluminati, or some other shadowy organisation pulling the strings, but they've been exposing us to these memes our entire lives to condition us, program us to their liking. Expose someone to anger long enough, they wil learn to hate. <br>
+                    "Love", "Greed", "Joy", "Despair". All memes, all passed along. </p>
+
+                </div>
+
+                <div id = "con3" class = "hide">
+
+                    <h2 class = "fullWidth"> RGU's True Purpose </h2>
+                    <h3 class = "textPadding"> LOOKS CAN BE DECIEVING </h3>
+                    <p class = "textPadding"> While RGU may seem like a perfectly reputable university with good staff and eager students, it is anything but that when you dig under the surface. Have you noticed anything... odd during your stay here? <br>
+                    Bizarre flickering lights? Switches that do... seemingly nothing? Random power cuts in some areas? Strange individuals roaming the premises? What if I were to tell you there was more to RGU than meets the eye? <br>
+                    Deep underneath the campus we know, is a top secret government facility. The signs were all there, like the tunnel system the lecturers use to navigate without being seen. But that then begs the question...</p>
+                    <h3 class = "textPadding"> WHY? </h3>
+                    <p class = "textPadding">Why is there this facility underneath RGU? Well, I believe we at the conspiracy society may have discoverd the reason why. The mulltiverse. RGU is a coverup for a government facility drilling into the multiverse itself. <br>
+                    It's why reality is so warped here. Why time doesn't pass in certain areas of the campus, why odd sightings are reported. The crack in reality created under the campus is having adverse affects on the world above it, and most are none the wiser. <br> 
+                    We can only hope and pray that they find whatever they are looking for before they cause irreversable damage to our world.</p>
+
+                </div>
+
+                <div id = "con4" class = "hide">
+
+                    <h2 class = "fullWidth"> The Iluminati </h2>
+                    <h3 class = "textPadding"> WHAT WE KNOW </h3>
+                    <p class = "textPadding"> Founded in the late 18th century, the Illuminati were a secret society that began in Bavaria, Germany. The group was founded by Adam Weishaupt, a philospher and professor. <br> 
+                    He sought to promote reason and free thought, comtrasting and combating the Catholic Churches influence. The order didn't last long, and was disbanned although they were believed to have continued underground, some blaming them for the French Revolution. </p>
+                    <h3 class = "textPadding"> WHAT WE BELIEVE </h3>
+                    <p class = "textPadding"> We at the society believe that the Illuminati still exist to this day, their influence only haven grown. They're everywhere. controlling from the shadows and slowly converting more and more to their ranks, making those who disagree with them disapear, perhaps even scattered across the multiverse. <br> 
+                    That's right, it's the Illuminati who are funding and running the facility underneath RGU! They've been spreading their memes for centuries, all to further their own goals which remain so out of reach to us...</p>
+
+                </div>
+                
+                <div id = "con5" class = "hide">
+
+                    <h2 class = "fullWidth"> The Snowman Yeti Uprising </h2>
+                    <h3 class = "textPadding"> THE SHADOW WAR </h3>
+                    <p class = "textPadding"> For as long as we can remember, the Yeti's have been an elusive race, prefering to stay isolated in their snow topped layers in the mountains than to interact with us. However, in recent years things have changed. <br>
+                    The leaders of our world have been waging war in secret against these people. What some call "Global Warming" is simply a battle strategim to keep the yeti's at bay. We believe that when the Snowmen made their alliegence to the Yeti many years back, it turned the tides of the cold war. <br>
+                    With so many snowmen being made, they could spy on so mnay people for the Yeti. As such, the only solution was to raise the temperature of the world so that snowmen couldn't be assembled. A genocide of this magnatude is shocking. Because of the heat, Yeti's can't leave their homes either. <br>
+                    It seems this war has already reached its conclussion.</p>
+
+                </div>
+
+                <div id = "con6" class = "hide">
+
+                    <h2 class = "fullWidth"> The Flat Earth</h2>
+                    <h3 class = "textPadding"> NO CURVES </h3>
+                    <p class = "textPadding"> Since ancient times people have known that the Earth was flat. Despite my personally belief about our planets cuboid shape, there are some very damning points of evidence towards our planet indeeed being a disc. <br>
+                    Firstly, we must accept that science is a lie, a tool to heard the sheep and make them think what you want them to think. It's the tool of athiests to silence faith, of the illuminati to surpress knowledge from the masses. These "experts" know nothing! <br>
+                    The Earth is surrounded by a big wall of ice that NASA is guarding to make sure we don't learn the truth. All these so called experts are just propaganda machines to make us complacent, you can't trust them with these fake things like "round earth", "big bang" and "evolution". <br>
+                    There are those who doubt, but not fully distrust, and just want to see for themselves and thats good, it means more people are waking up. There is no curvature, it's a flat disc and if you fall off the edge of the ice wall, you land in Australia!</p>
+
+                </div>
+
+                <div id = "con7" class = "hide">
+
+                    <h2 class = "fullWidth"> The Gloperjocker </h2>
+                    <h3 class = "textPadding"> THE MOST HORRFYING ONE YET</h3>
+                    <p class = "textPadding"> This year, we were made aware to something new. A cryptid, for lack of a better word. Extensive analysis on this creature has brought numerous revelations of shock and terror, and shaken our understanding of society to its very core. <br>
+                    We have no name for this creature other than a translation of an old Latin tale. A bite stronger than any person or animal, and hide that can withstand the toughest blows. The Gloperjocker (glɒpəɹ-ʤɒkəɹ). </p>
+
+                    <h3 class = "textPadding"> WHERE DID IT COME FROM? </h3>
+                    <p class = "textPadding"> During the course of our investigation, we uncovered numerous sightings and myths regarding this creature. Some tales date as far back as the sinking of Atlantis, where it was believed The Gloperjocker engaged in combat with Poseidon and the other Olympians, resulting in its sinking. <br>
+                    Whether it crawled out of the Hollow Earth or through an interdimensial crack, it is universally accepted that The Gloperjocker emerged into the world in 79 AD through Mount Vesuvius, causing it to erupt. From there it rampaged for 1100 years across the Earth, notably causing destruction in France, where it fought and defeated a French Knight in 671 AD and claiming his Beret for itself. <br>
+                    Eventually it ended up in north eastern Scotland, more specifically what would become Aberdeen. The Red Winter of 1179 has all but been wiped from the history books because of the sheer brutality, but in the end The Gloperjocker was subdued and captured. We believe it could have easily broken out, and simply did this because it was... bored. <br>
+                    The bridge of dee was constructed around its prison to trap it, and Aberdeen was granted its charter and saw frequent activity, all in the name of watching the Gloperjocker.</p>
+
+                    <h3 class = "textPadding"> We will be attemtping to hunt the Gloperjocker and learn the truth for ourselves, and see if we can find its prison under the bridge of dee!</h3>
+
+                    <h4 id = "gloped"> URGENT! URGENT! THE GLOPERJOCKER HAS ESCAPED ITS PRISON, I REPEAT THE GLOPERJOCKER HAS ESCAPED ITS PRISON. THE HUNT IS LOST. EVERYBODY IS LOST. WE NEE HE... Our Saviour Is Free... </h4>
+
+
+                </div>
+
+                <div id = "con8" class = "hide">
+
+                    <h2 class = "fullWidth"> Whales </h2>
+                    <h3 class = "textPadding"> SNEAKY SNEAKY WHALES</h3>
+                    <p class = "textPadding"> In recent times, whale populations are actually recovering somewhat and that's amazing. It's horrible that they were on the decline and it's nice to see them making their comeback. But why are they making a comback? It's because they've developed camouflage of course. <br>
+                    You see, the most powerful camouflage is the power of hiding in plain sight. You walk right past a whale and don't even notice it's a whale! It's ingenious! But it begs the question, if these whales are the masters of hide and seek, will we be able to find them? Well, we went on a whale hunt through Aberdeen! <br>
+                    Our findings are as follows. We spotted 73 whales posing as trees, 23 or 24 as statues (we coudn't decide on one), 1 posing as your great uncle who's trying to leave you with his inheritence despite not existing, and abour 5 pretending to be fish in a pond. Truly, they are glorius.</p>
+
+                </div>
+
+                <div id = "con9" class = "hide">
+
+                    <h2 class = "fullWidth"> The Hollow Earth</h2>
+                    <h3 class = "textPadding"> THE TRUTH UNDER THE EARTH</h3>
+                    <p class = "textPadding"> Some believe the Esrth to be flat, a pyramid, a sphere, a cube or anything. But what we all know is true,is that science once again lies to us. The Earth... Has a completely hollow interior. First discussed in the late 17th century, this truth has been long whispered across the world. <br>
+                    While we have our modern concept, the idea dates back to ancient times, with mythology suggesting that there was more inside our planet than we realised. The Ancient Greeks told us of the Underworld, the Celts told us abou Cruachan, the Irish gate to hell. These depicitons were meant to scare us away from the Hollow Earth and the truths that lie within. </p>
+
+                    <h3 class = "textPadding"> WHAT IS IN THE HOLLOW EARTH?</h3>
+                    <p class = "textPadding"> We can never truly know without a proper exploration. The underworld has probably changed lots since our intiial reports of it centuries ago. We believe there to be various creatures there, such as Giants, as well as where the entity known as The Gloperjocker originated from. <br>
+                    There also appears to be records of a strange substance known only as "Red Water". We haven't been able to research it ourself, but others have claimed that exposure to it alters the brain in various, seemingly random ways. Exposure is not recomended. Some believe there may even be aliens inside the Hollow Earth, or a rift between dimensions!</p>
+
+                </div>
+
             </aside>
 
         </div>

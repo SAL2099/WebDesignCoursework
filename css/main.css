@@ -1,42 +1,372 @@
 /*Colours*/
 
+header{
+    background-color:#e6a5fa;; /* Set background colour of header */
+}
+
 h1{
-    color:#B46CFF;
-    background-color: #C6C7FF;
+    color: #510d91;
+    background-color:#e6a5fa;
+    /* Set background colour and text colour  */
 }
 
 h2{
-    color:#B46CFF;
+    color:#630db5;
+    background-color: antiquewhite;
+    /* Set background colour and text colour  */
 }
 
 h3{
     color:#2E006E;
+    /* Set text colour  */
 }
 
 main{
-    color:#C6C7FF;
+    color:#2E006E;
+    /* Set text colour  */
 }
 
 body{
-    color:#8127FF;
+    color:#2E006E;
+    /* Set text colour  */
 }
-
 
 
 /*Position and Font*/
 
+.activePage{
+    /* Highlights the page you are on in the nav bar*/
+    background-color: #f7d5a8;
+}
+
+.logo{
+    width:75px;
+    height:75px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float:left;
+    /* Sets the postion of the logo*/
+}
+
+
+header{
+    border:#510d91 solid;
+    width:100%;
+    /* Creates the header border and makes it take up the whole width*/
+}
+
+.mainLogin{
+    float:right;
+    position:absolute;
+    top:40px;
+    right:15px;
+    /* Positions the log in form in the top right of the page*/
+}
+
 h1{
-    text-align: center;
-    margin: auto;
-    width: 50%;
+    margin: 5px;
+    margin-bottom: 2%;
+    margin-left:30px;
+    width: 90%;
     text-decoration: underline;
-    padding: 10px;
+    padding: 16px;
+    /* Positions H1 text, used in the header*/
 }
 
 h2{
-    font-family: 'luminari',fantasy;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 2%;
+    width: 50%;
+    text-decoration: underline;
+    padding: 10px;
+    border:#2E006E solid;
+    /* Sets font and alignment of H2 text, as well as applying an underline and a border*/
 }
 
 h3{
     font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    /*Sets the font size and type of H3*/
+}
+
+ul{
+    list-style-type: none;
+    margin: 5px;
+    margin-bottom: 2%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: antiquewhite;
+    border:#510d91 solid;
+    /* Nav bar, sets the container the list is inside*/
+}
+
+li{
+    list-style-type: none;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: larger;
+    width: 12%;
+    border:#2E006E hidden;
+    /* The list of pages inside the nav bar, positions them*/
+}
+
+li:hover{
+    background-color: #f7d5a8;
+    /* Changes the background colour whenever you hover over a link in the nav bar */
+}
+
+li a:hover{
+    background-color:#f7d5a8
+    /* Changes the background colour whenever you hover over a link in the nav bar */
+}
+
+.centImg{
+    margin-left: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* Positions an image to be more centred to the page*/
+}
+
+.left-col{
+    background-color: aliceblue;
+    border:#510d91 solid;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 10px;
+    width: 55%;
+    height:fit-content;
+    float: left;
+    /* Defines a column on the left side of the screen for content to sit in*/
+}
+
+.right-col{
+    float: right;
+    background-color: aliceblue;
+    border:#510d91 solid;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 10px;
+    width: 35%;
+    height:fit-content;
+    float: right;
+    /* Defines the right column for content to be placed inside.*/
+}
+
+.centre-text{
+    margin-left: 25%;
+    /* Centres text*/
+}
+
+fieldset{
+    margin-left: 5px;
+    /* Assigns a margin to fieldsets */
+}
+
+table{
+    text-indent: initial;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 10pt;
+    font-style: normal;
+    text-align: start;
+    border-spacing: 2px;
+    font-variant: normal;
+    border-collapse: collapse;
+    padding-bottom: 30px;
+
+    /* Creates the design of the table*/
+}
+
+th{
+    display: table-cell;
+    vertical-align: center;
+    font-weight: bold;
+    text-align: center;
+    border: black 2px solid;
+    border-spacing: 2px;
+    /* Positions the table heads*/
+}
+
+td{
+    display: table-cell;
+    vertical-align: inherit;
+    border: black 2px solid;
+    border-spacing: 2px;
+    width:250px;
+    height:100px;
+    padding:10px;
+    /* Positions the table cells and provides a border to seperate elements*/
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    /* Positions the table rows*/
+}
+
+tr:nth-child(even) {
+    background-color:antiquewhite;
+    /* Makes every even coloured column in the table the specified colour*/
+}
+
+tr:hover{
+    background-color: aliceblue;
+}
+
+.carousel{
+    position:absolute;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-bottom:20px;
+    height:fit-content;
+    width:53%;
+    border-collapse: collapse;
+    background-color: azure;
+    border:#510d91 solid;
+    /* Positions the carousel in the page*/
+}
+
+.carousel-inner{
+    width:100%
+}
+
+.carousel-item{
+    width:100%
+}
+
+.carousel-control-prev{
+    float: left;
+    bottom: 15%;
+    height:10%;
+    position: absolute;
+    align-items: center;
+    /* Positions the arrow to switch to the previous image*/
+}
+
+.carousel-control-next{
+    bottom: 15%;
+    height:10%;
+    margin-left: 42%;
+    position: absolute;
+    align-items: center;
+    /* Positions the arrow to switch to the next image*/
+}
+
+.gallery-img{
+    width:100%;
+}
+
+#img-gallery{
+    padding-top:10px;
+}
+
+#img-gallery.row{
+    margin-bottom:10px;
+}
+
+.col{
+    padding:5px;
+ 
+}
+
+.left-col-small{
+    background-color: aliceblue;
+    border:#510d91 solid;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: 10px;
+    width: 25%;
+    height:fit-content;
+    float: left;
+    /* A smaller version of the left column*/
+}
+
+.right-col-big{
+    float: right;
+    background-color: aliceblue;
+    border:#510d91 solid;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: 10px;
+    width: 60%;
+    height:fit-content;
+    float:right;
+    /* A larger version of the right column*/
+}
+
+.imgWidthFull{
+    width:100%;
+    /* Sets the width of assigned object to 100%. Intended for images*/
+}
+
+footer{
+    float: left;
+    width:100%;
+    margin-top: 300px;
+    padding: 16px;
+    /* Positions the footer at the bottom of the page */
+}
+
+
+.newsImage{
+    height:25%;
+    width:25%;
+    float:left;
+    padding: 5px;
+    margin-bottom:10px;
+    /* Shrinks an image down to fit in a smaller container, floats it left so text can be put in next to it, and adds some padding so its not too close.*/
+}
+
+.textPadding{
+    padding:5px;
+    /* Adds a litle padding */
+}
+
+.fullWidth{
+    width:100%;
+}
+
+.news{
+    padding:30px;
+    border:#510d91 solid;
+}
+
+#eventForm{
+    /* Provides features for the event submision form */
+    margin-top: 16px;
+    padding:16px;
+    padding-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+#gloped{
+    /* Used for a specific line to make it small and hard to read for the dramatic effect*/
+    font-size: x-small;
+    color:#afd7fa;
 }

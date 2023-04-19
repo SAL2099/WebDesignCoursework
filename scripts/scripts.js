@@ -49,3 +49,93 @@ function submitEvent(){
     }
 }
 
+//All these functions are for the conspiracy page. Each is paired to a theory, so that when an image is selected, it shows the corresponding theory
+
+function showCon1(){
+    var x = document.getElementById("con1");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon2(){
+    var x = document.getElementById("con2");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon3(){
+    var x = document.getElementById("con3");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon4(){
+    var x = document.getElementById("con4");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+function showCon5(){
+    var x = document.getElementById("con5");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon6(){
+    var x = document.getElementById("con6");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon7(){
+    var x = document.getElementById("con7");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon8(){
+    var x = document.getElementById("con8");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
+
+function showCon9(){
+    var x = document.getElementById("con9");
+    if(x.style.display === "none"){
+        x.style.display = "block";
+    }
+    else{
+        x.style.display = "none";
+    }
+}
